@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>My portfolio</title>
+          <link rel="stylesheet" href="css/style.css" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+     </head>
+     <body>
+          <!-- NAVBAR-->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+               <div class="container">
+                    <a class="navbar-brand" href="#">Portfolio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                         <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                              <li class="nav-item">
+                                   <a class="nav-link active" aria-current="page" href="#home">ACCEUIL</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#about">A PROPOS</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#skills">COMPETENCES</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link">EXPERIENCES</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link">CONTACTS</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+
+          <section id="home" class="mt-5">
+               <div class="container">
+                    <div class="row align-items-center">
+                         <div class="col-md-6 " id="home-text">
+                              <h1>Bienvenue...je m'appelle,</h1>
+                              <h2 id="joel" class="mb-3">Joel Georges.</h2>
+                              <a href="#contact" class="btn" id="contact-me">Contactez-moi</a>
+                              <a href="#cv" class="btn" id="my-cv">Télécharger mon CV</a>
+                         </div>
+                         <div class="col-md-6">
+                              <img src="assets/home.webp" alt="Portfolio Image" class="img-fluid" />
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section id="about">
+               <div class="container">
+                    <div class="row align-items-center">
+                         <div class="col-md-6">
+                              <img src="assets/about.webp" alt="About Image" class="img-fluid" />
+                         </div>
+                         <div class="col-md-6" id="about-text">
+                              <h1 class="mb-5" style="color: #264067;">À propos de moi...</h1>
+                              <p>
+                                  MAMY NOMENJANAHARY Joel Georges, 22 ans, titulaire d’une Licence en Informatique et actuellement en Master 1 en Administration Systèmes et Réseaux (ASR) à 
+                                  l’Institut Infocentre de la Salle Soavimbahoaka. Passionné par l’automatisation, la fiabilité et la sécurité des systèmes, je vise le métier d’Ingénieur DevOps.
+
+                                À travers mon parcours, je développe une approche mêlant rigueur d’ingénierie, culture réseau et pratiques DevOps modernes (Git, CI/CD, gestion de configuration). 
+                                Curieux et méthodique, je cherche à consolider mes compétences via des projets concrets et des expériences professionnelles pour concevoir des infrastructures résilientes, évolutives et sécurisées.</p>
+                              <a href="#experience" class="btn" id="view-projects">Voir mes projets</a>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section id="skills" class="py-5">
+               <div class="container">
+                    <h1 class="py-5 text-center" style="color:#264067;">Mes compétences techniques</h1>
+                    <div class="row">
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-server skill-icon my-3 admin" aria-hidden="true"></i>
+                                   <h5 class="card-title">Administration système</h5>
+                                   <p class="card-text small text-muted">Windows | Linux | Base de données</p>
+                                   <ul style="text-align: left;">
+                                        <li>Windows Server : Active Directory(comptes, GPO, permissions)</li>
+                                        <li>Ubuntu, Debian</li>
+                                        <li>Base de données: MySQL, PostgreSQL</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-globe2 skill-icon my-3 network" aria-hidden="true"></i>
+                                   <h5 class="card-title">Réseau</h5>
+                                   <p class="card-text small text-muted">Modèles | Protocoles | Serveurs</p>
+                                   <ul style="text-align: left;">
+                                        <li>TCP/IP, OSI, VLAN, HTTP & HTTPS</li>
+                                        <li>DHCP, SNMP, SSH, DNS</li>
+                                        <li>SD-WAN? Haute disponibilité, cluster</li>
+                                        <li>Serveurs: Apache, Nginx, FTP</li>
+                                        <li>VPN : Site to site(IPsec, Hub-and-Spoke) Remote Access</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-code-slash skill-icon my-3 code" aria-hidden="true"></i>
+                                   <h5 class="card-title">Programmation</h5>
+                                   <p class="card-text small text-muted">Langages et pratiques de développement</p>
+                                      <ul style="text-align: left;">
+                                         <li>Python</li>
+                                         <li>Bash / Shell</li>
+                                         <li>Bases de développement web (HTML, CSS)</li>
+                                         <li>Notions de JavaScript</li>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-hdd-network skill-icon my-3 virtual" aria-hidden="true"></i>
+                                   <h5 class="card-title">Virtualisation</h5>
+                                   <p class="card-text small text-muted">Hyperviseurs & Plateforme de Virtualisation</p>
+                                   <ul style="text-align: left;">
+                                        <li>Proxmox VE</li>
+                                        <li>VM Ware</li>
+                                        <li>Virtual-Box</li>
+                                        <li>Windows Hyper-V</li>
+                                        <li>Notions de conteneurisation (Docker – conceptuel)</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-headset skill-icon my-3 helpdesk" aria-hidden="true"></i>
+                                   <h5 class="card-title">HelpDesk N1 & N2</h5>
+                                   <p class="card-text small text-muted">Administration, dépannage et gestion du parc IT</p>
+                                   <ul style="text-align: left;">
+                                        <li>Diagnostic réseau : ping, tracert, ipconfig, nslookup</li>
+                                        <li>Maintenance matérielle et logicielle</li>
+                                        <li>Câblage réseau (RJ45, brassage, repérage)</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-shield-lock skill-icon my-3 security" aria-hidden="true"></i>
+                                   <h5 class="card-title">Sécurité</h5>
+                                   <p class="card-text small text-muted">Pare-feu | Analyse | Monitoring | Autres équipements</p>
+                                   <ul style="text-align: left;">
+                                        <li>Pare-feu : Fortigate, Pfsense</li>
+                                        <li>Gestion d'adresse IP : phpIPAM</li>
+                                        <li>Analyse de paquets & monitoring : Wireshark, Ntop-NG</li>
+                                        <li>Autres : Cisco routeurs et switchs, Mikrotik</li>
+                                        
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-arrow-repeat skill-icon my-3 devops" aria-hidden="true"></i>
+                                   <h5 class="card-title">Discipline DevOps</h5>
+                                   <p class="card-text small text-muted">Scripting | Automatisation /|Versionning</p>
+                                   <ul style="text-align: left;">
+                                        <li>CI/CD : Jenkins, Ansible (en cours d'apprentissage)</li>
+                                        <li>Git, GitHub, Gitea</li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                              <div class="card skill-card h-100 text-center p-3">
+                                   <i class="bi bi-diagram-3 skill-icon my-3 sim" aria-hidden="true"></i>
+                                   <h5 class="card-title">Simulation | Émulation Réseau</h5>
+                                   <p class="card-text small text-muted">Outils de modélisation et de laboratoire réseau (Lab)</p>
+                                   <ul style="text-align: left;">
+                                        <li>Gns3</li>
+                                        <li>Eve-ng</li>
+                                        <li>Cisco Packet Tracer</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <section id="experience" class="py-5">
+               <div class="container">
+                    <h1 class="py-5 " style="color:#264067; right: 0;">Expériences (stages)</h1>
+                    <div class="row g-4 mb-5">
+                         <!-- Stage 1 -->
+                         <div class="col-12 col-md-6 col-lg-4">
+                              <div class="card exp-card h-100 p-3">
+                                   <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div class="fw-bold">Stage Réseau - CIDST TSIMBAZAZA</div>
+                                        <div class="exp-dates text-muted small">Sept 2023 — Nov 2023</div>
+                                   </div>
+                                   <div class="text-muted small mb-2">Lieu : Antananarivo - Tsimbazaza</div>
+                                   <p class="mb-2">Description : Mise en place d'un outil de supérivision réseau</p>
+                                   <p class="mb-2">Objectif : Surveiller la consommation de la bande des hotes dans le réseau local</p>
+                                   <div class="exp-techs"><strong>Outils :</strong> Pfsense, Ntop-NG, VM-Ware</div>
+                              </div>
+                         </div>
+                         <!-- Stage 2 -->
+                         <div class="col-12 col-md-6 col-lg-4">
+                              <div class="card exp-card h-100 p-3">
+                                   <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div class="fw-bold">Stage Administration système - CENHOSOA Soavinandriana</div>
+                                        <div class="exp-dates text-muted small">Août 2024 — Nov 2024</div>
+                                   </div>
+                                   <div class="text-muted small mb-2">Antananarivo - Soavinandriana</div>
+                                   <p class="mb-2">Description : Installation et configuration d'un serveur de fichiers</p>
+                                   <p class="mb-2">Objectif : Synchronisation automatique des fichiers générés sur une application de gestion hospitalière dans un département spécifique vers le serveur</p>
+                                   <div class="exp-techs"><strong>Outils :</strong> Ubuntu serveur, Syncthing, script Bash, FTP, Samba</div>
+                              </div>
+                         </div>
+                         <!-- Stage 3 -->
+                         <div class="col-12 col-md-6 col-lg-4">
+                              <div class="card exp-card h-100 p-3">
+                                   <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div class="fw-bold">Stage Administration Système & Réseau - FID Direction Générale</div>
+                                        <div class="exp-dates text-muted small">Jui 2025 — Déc 2025</div>
+                                   </div>
+                                   <div class="text-muted small mb-2">Antananarivo - Andrefana Ambohijanahary</div>
+                                   <p class="mb-2">Projet pricipal : Conception et implementation d'une architecture réseau sécurisée hautement disponible basé sur un cluster de pare-feu FortiGate</p>
+                                   <p class="mb-2">Mission secondaire : Intervention et support utilisateur N1 & N2(Dévérouillage compte utilisateurs, Installation de logiciel nécessitant une élévation de permissions, cablage et mise en réseau des équipements,application de messagerie...), Gestion d'adresse IPv4</p>
+                                   <div class="exp-techs"><strong>Outils :</strong> FortiGate, Gns3, phpIPAM, Active Directory, Proxmox-VE...</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <footer id="contact" class="py-5 text-white">
+               <div class="container">
+                <h1 class="py-5 text-center" style="color:#ffffff;">Contacts & réseaux</h1>
+                    <div class="row">
+                         <div class="col-md-4 mb-4">
+                              <h5>Contacts</h5>
+                              <p class="mb-1"><i class="bi bi-telephone-fill"></i> Tel : <a href="tel:+261 38 52 388 48" class="text-white">+261 00 000 000</a></p>
+                              <p class="mb-1"><i class="bi bi-whatsapp"></i> WhatsApp : <a href="https://wa.me/261339037076" target="_blank" class="text-white">+261 00 000 000</a></p>
+                              <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Adresse : Lot GVI 67-32 ANKANDRINA</p>
+                         </div>
+                         
+                         <div class="col-md-4 mb-4">
+                              <h5>Réseaux</h5>
+                              <p class="mb-2"><i class="bi bi-envelope-fill"></i> Gmail : <a href="mailto:joelgeorges0901@gmail.com" class="text-white">joelgeorges0901@gmail.com</a></p>
+                              <p class="mb-2"><i class="bi bi-facebook"></i> Facebook : <a href="https://facebook.com/" target="_blank" class="text-white">facebook.com</a></p>
+                              <p class="mb-2"><i class="bi bi-github"></i> GitHub : <a href="https://github.com/MamyJoel" target="_blank" class="text-white">github.com/MamyJoel</a></p>
+                         </div>
+                         <div class="col-md-4 mb-4">
+                              <h5>Envoyer un message</h5>
+                              <form class="contact-form" action="mailto:joelgeorges0901@gmail.com" method="post" enctype="text/plain" target="_blank">
+                                   <div class="mb-2">
+                                        <input type="text" name="Nom" class="form-control" placeholder="Votre nom" required>
+                                   </div>
+                                   <div class="mb-2">
+                                        <input type="email" name="Email" class="form-control" placeholder="Votre email" required>
+                                   </div>
+                                   <div class="mb-2">
+                                        <textarea name="Message" rows="4" class="form-control" placeholder="Votre message" required></textarea>
+                                   </div>
+                                   <button type="submit" class="btn btn-light btn-sm">Envoyer</button>
+                              </form>
+                         </div>
+                    </div>
+                    <!-- logos des outils (placer PNGs dans assets/logos/) -->
+                    <div class="footer-logos mt-3">
+                         <img src="assets/logos/phpipam.png" alt="phpIPAM">
+                         <img src="assets/logos/python.png" alt="Python">
+                         <img src="assets/logos/fortinet.png" alt="FortiGate">
+                         <img src="assets/logos/pfsense.png" alt="pfSense">
+                         <img src="assets/logos/ubuntu.png" alt="Ubuntu">
+                         <img src="assets/logos/ansible.png" alt="Ansible">
+                         <img src="assets/logos/proxmox.png" alt="Proxmox">
+                         <img src="assets/logos/gns3.jpg" alt="GNS3">
+                         <img src="assets/logos/jenkins.png" alt="Jenkins">
+                         <img src="assets/logos/git.jpg" alt="Git">
+                         <img src="assets/logos/docker.png" alt="Docker">
+                    </div>
+                    <div class="text-center mt-3 small text-white-50">© <span id="year"></span> Joel Georges</div>
+               </div>
+          </footer>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+          <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+     </body>
+</html>

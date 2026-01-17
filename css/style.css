@@ -1,0 +1,266 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     background-image: url("../assets/bg.webp");
+     font-family: Poppins, sans-serif;
+}
+#navbarNav {
+     background-color: red;
+}
+/* Ajout : aligner les nav items à gauche et ajouter des espacements */
+.navbar .navbar-nav {
+     margin-right: 0; /* remove fixed offset */
+     justify-content: flex-end; /* alignement à droite */
+     gap: 1rem; /* espace entre les items */
+}
+.navbar .navbar-nav .nav-link {
+     padding-left: 0.5rem;
+     padding-right: 0.5rem;
+}
+#home #contact-me {
+     background-color: #264067;
+     color: white;
+     border: #264067 3px solid;
+}
+#home #my-cv {
+     background-color: none;
+     color: #264067;
+     border: #264067 3px solid;
+     margin-left: 10px;
+}
+#home h1 {
+     font-size: clamp(1.25rem, 2.2vw, 2rem);
+}
+#home h2 {
+     font-size: clamp(2rem, 6vw, 5rem); /* scales between ~32px and ~80px */
+     line-height: 1.05;
+}
+#home-text {
+     margin-top: -150px;
+}
+#view-projects {
+     background-color: #264067;
+     color: white;
+     border: #264067 3px solid;
+     margin-top: 30px;
+}
+.skill-card {
+     border: 1px solid rgba(38, 64, 103, 0.12);
+     border-radius: 10px;
+     transition: transform 0.15s ease, box-shadow 0.15s ease;
+     background: rgba(255, 255, 255, 0.8);
+     padding: 1rem;
+}
+.skill-card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 8px 20px rgba(38, 64, 103, 0.12);
+}
+.skill-icon {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 56px;
+     height: 56px;
+     font-size: 24px;
+     color: #ffffff; /* icône en blanc */
+     background-color: rgba(0, 0, 0, 0.12); /* fallback */
+     border-radius: 50%; /* rond */
+     line-height: 1;
+     margin: 0 auto 12px;
+}
+
+/* couleurs contextuelles pour les icônes */
+.skill-icon.admin {
+     background-color: #264067;
+} /* Administration - bleu foncé */
+.skill-icon.network {
+     background-color: #0d6efd;
+} /* Réseau - bleu bootstrap */
+.skill-icon.code {
+     background-color: #6f42c1;
+} /* Programmation - violet */
+.skill-icon.virtual {
+     background-color: #6610f2;
+} /* Virtualisation - indigo */
+.skill-icon.helpdesk {
+     background-color: #20c997;
+} /* HelpDesk - vert */
+.skill-icon.security {
+     background-color: #dc3545;
+} /* Sécurité - rouge */
+.skill-icon.devops {
+     background-color: #fd7e14;
+} /* DevOps - orange */
+.skill-icon.sim {
+     background-color: #6c757d;
+} /* Simulation - gris */
+#experience {
+     background: rgba(38, 64, 103, 0.03);
+}
+.exp-card {
+     border: 1px solid rgba(38, 64, 103, 0.08);
+     border-radius: 10px;
+     background: #fff;
+     padding: 1rem;
+}
+.exp-dates {
+     white-space: nowrap;
+}
+.exp-techs {
+     margin-top: 8px;
+     font-size: 0.9rem;
+     color: #264067;
+}
+#contact,
+footer#contact {
+     background-color: #264067; /* bleu foncé */
+     color: #fff;
+}
+#contact a {
+     color: #ffffff;
+     text-decoration: underline;
+}
+.contact-form .form-control {
+     background: rgba(255, 255, 255, 0.95);
+     border: 1px solid rgba(0, 0, 0, 0.08);
+     border-radius: 6px;
+     color: #000;
+}
+.contact-form .form-control:focus {
+     box-shadow: none;
+     border-color: #0d6efd;
+}
+footer#contact .btn-light {
+     background-color: #ffffff;
+     color: #264067;
+     border: none;
+}
+/* logos dans le footer */
+.footer-logos {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 12px;
+     justify-content: center;
+     align-items: center;
+     margin-top: 12px;
+     opacity: 0.95;
+}
+.footer-logos img {
+     height: 36px;
+     width: auto;
+     object-fit: contain;
+     filter: none; /* laisser les PNG d'origine visibles */
+     background: transparent;
+     padding: 4px;
+}
+@media (max-width: 1200px) {
+     #home h2 {
+          font-size: 4.5rem;
+     }
+     .skill-icon {
+          width: 52px;
+          height: 52px;
+          font-size: 22px;
+     }
+}
+@media (max-width: 992px) {
+     #home-text {
+          margin-top: -80px;
+     }
+     #home h2 {
+          font-size: 3.6rem;
+     }
+     .skill-card {
+          padding: 0.9rem;
+     }
+     .exp-card {
+          padding: 0.9rem;
+     }
+     .footer-logos img {
+          height: 34px;
+     }
+}
+@media (max-width: 768px) {
+     /* stack and center navbar links in collapsed / non-collapsed view */
+     .navbar .navbar-nav {
+          justify-content: center;
+     }
+     #home-text {
+          margin-top: -40px;
+          text-align: center;
+     }
+     #home h2 {
+          font-size: 2.6rem;
+     }
+     .skill-icon {
+          width: 48px;
+          height: 48px;
+          font-size: 20px;
+     }
+     .skill-card {
+          padding: 0.8rem;
+     }
+     .exp-card {
+          padding: 0.8rem;
+     }
+     /* footer columns stack */
+     footer#contact .row {
+          text-align: center;
+     }
+     footer#contact .col-md-4 {
+          width: 100%;
+          display: block;
+     }
+     .footer-logos img {
+          height: 32px;
+     }
+}
+@media (max-width: 576px) {
+     #home-text {
+          margin-top: 0;
+          padding-top: 1rem;
+     }
+     #home h1 {
+          font-size: 1.1rem;
+     }
+     #home h2 {
+          font-size: 1.8rem;
+     }
+     .skill-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 18px;
+     }
+     .skill-card {
+          padding: 0.6rem;
+     }
+     .exp-card {
+          padding: 0.6rem;
+     }
+     .footer-logos {
+          gap: 8px;
+     }
+     .footer-logos img {
+          height: 26px;
+          padding: 2px;
+     }
+     /* ensure nav toggler is visible and links not overflowing */
+     .navbar .navbar-nav .nav-link {
+          padding-left: 0.4rem;
+          padding-right: 0.4rem;
+          font-size: 0.95rem;
+     }
+}
+@media (min-width: 768px) {
+     #contact-me {
+          margin-bottom: 10px;
+     }
+}
+/* accessibility / touch target improvement */
+@media (hover: none) {
+     .skill-card:hover {
+          transform: none;
+          box-shadow: none;
+     }
+}
