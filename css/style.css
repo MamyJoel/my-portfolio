@@ -2,7 +2,11 @@
      padding: 0;
      margin: 0;
      box-sizing: border-box;
+}
+body {
      background-image: url("../assets/bg.webp");
+     background-size: cover;
+     background-position: center;
      font-family: Poppins, sans-serif;
 }
 #navbarNav {
@@ -11,8 +15,8 @@
 /* Ajout : aligner les nav items à gauche et ajouter des espacements */
 .navbar .navbar-nav {
      margin-right: 0; /* remove fixed offset */
-     justify-content: flex-end; /* alignement à droite */
      gap: 1rem; /* espace entre les items */
+     /* let Bootstrap handle justification (remove forced flex-end) */
 }
 .navbar .navbar-nav .nav-link {
      padding-left: 0.5rem;
@@ -24,7 +28,7 @@
      border: #264067 3px solid;
 }
 #home #my-cv {
-     background-color: none;
+     background-color: transparent; /* was: none (invalid) */
      color: #264067;
      border: #264067 3px solid;
      margin-left: 10px;
@@ -46,16 +50,22 @@
      margin-top: 30px;
 }
 .skill-card {
-     border: 1px solid rgba(38, 64, 103, 0.12);
+     border: 1px solid rgba(38, 64, 103, 0.08); /* soft subtle border */
      border-radius: 10px;
-     transition: transform 0.15s ease, box-shadow 0.15s ease;
+     transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
      background: rgba(255, 255, 255, 0.8);
      padding: 1rem;
+     box-shadow: 0 2px 6px rgba(38, 64, 103, 0.04); /* gentle base shadow */
 }
 .skill-card:hover {
      transform: translateY(-6px);
-     box-shadow: 0 8px 20px rgba(38, 64, 103, 0.12);
+     box-shadow: 0 8px 20px rgba(38, 64, 103, 0.25);
+     background-color: #264067;
+     color: whitesmoke;
+     /* keep hover border removed for a cleaner look on dark background */
+     border: none;
 }
+
 .skill-icon {
      display: inline-flex;
      align-items: center;
@@ -72,8 +82,8 @@
 
 /* couleurs contextuelles pour les icônes */
 .skill-icon.admin {
-     background-color: #264067;
-} /* Administration - bleu foncé */
+     background-color: #5bd467;
+}
 .skill-icon.network {
      background-color: #0d6efd;
 } /* Réseau - bleu bootstrap */
@@ -181,6 +191,7 @@ footer#contact .btn-light {
           height: 34px;
      }
 }
+
 @media (max-width: 768px) {
      /* stack and center navbar links in collapsed / non-collapsed view */
      .navbar .navbar-nav {
@@ -256,11 +267,47 @@ footer#contact .btn-light {
      #contact-me {
           margin-bottom: 10px;
      }
+     #my-cv {
+          margin-top: 0; /* override negative top-margin from previous rule */
+          margin-left: 12px;
+     }
+}
+@media (max-width: 382px) {
+     #contact-me {
+          margin-bottom: 10px;
+     }
 }
 /* accessibility / touch target improvement */
 @media (hover: none) {
      .skill-card:hover {
           transform: none;
           box-shadow: none;
+     }
+}
+
+/* Override problematic desktop rules for buttons (>=769px) */
+@media (min-width: 769px) {
+     /* remove large negative offset applied to the whole block on desktop */
+     #home-text {
+          margin-top: 0; /* override -150px so content and buttons align */
+     }
+
+     /* ensure buttons align and have consistent spacing */
+     #home-text .btn {
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: 1rem;
+          padding: 0.5rem 0.9rem;
+          border-radius: 6px;
+     }
+
+     /* keep primary/secondary spacing - avoid conflicting negative margins */
+     #home #contact-me {
+          margin-right: 12px;
+          margin-bottom: 0; /* override any existing bottom margin */
+     }
+     #home #my-cv {
+          margin-top: 0; /* override negative top-margin from previous rule */
+          margin-left: 12px;
      }
 }
