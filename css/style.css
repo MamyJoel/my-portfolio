@@ -28,6 +28,37 @@ body {
      padding-left: 0.5rem;
      padding-right: 0.5rem;
 }
+
+/* Navbar link hover: color and underline bar */
+.navbar .nav-link {
+     transition:
+          color 0.15s ease,
+          opacity 0.15s ease;
+     position: relative;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+     color: #264067 !important;
+}
+.navbar .nav-link::after {
+     content: "";
+     position: absolute;
+     left: 12%;
+     right: 12%;
+     bottom: 0px;
+     height: 2px;
+     background: transparent;
+     transform: scaleX(0);
+     transform-origin: center;
+     transition:
+          transform 0.18s ease,
+          background 0.18s ease;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after {
+     background: #264067;
+     transform: scaleX(1);
+}
 #home #contact-me {
      background-color: #264067;
      color: white;
