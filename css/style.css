@@ -8,6 +8,7 @@ body {
      background-size: cover;
      background-position: center;
      font-family: Poppins, sans-serif;
+     min-width: 360px;
 }
 #navbarNav {
      background-color: red;
@@ -52,7 +53,10 @@ body {
 .skill-card {
      border: 1px solid rgba(38, 64, 103, 0.08); /* soft subtle border */
      border-radius: 10px;
-     transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+     transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          border-color 0.15s ease;
      background: rgba(255, 255, 255, 0.8);
      padding: 1rem;
      box-shadow: 0 2px 6px rgba(38, 64, 103, 0.04); /* gentle base shadow */
@@ -176,10 +180,14 @@ footer#contact .btn-light {
 }
 @media (max-width: 992px) {
      #home-text {
-          margin-top: -80px;
+          margin-top: -40px;
+          text-align: center;
      }
      #home h2 {
           font-size: 3.6rem;
+     }
+     #contact-me {
+          margin-bottom: 15px;
      }
      .skill-card {
           padding: 0.9rem;
@@ -203,6 +211,12 @@ footer#contact .btn-light {
      }
      #home h2 {
           font-size: 2.6rem;
+     }
+     #contact-me {
+          margin-top: 0;
+     }
+     #my-cv {
+          margin-top: -13px;
      }
      .skill-icon {
           width: 48px;
@@ -238,6 +252,12 @@ footer#contact .btn-light {
      #home h2 {
           font-size: 1.8rem;
      }
+     #contact-me {
+          margin-top: 0;
+     }
+     #my-cv {
+          margin-top: -13px;
+     }
      .skill-icon {
           width: 40px;
           height: 40px;
@@ -263,18 +283,9 @@ footer#contact .btn-light {
           font-size: 0.95rem;
      }
 }
-@media (min-width: 768px) {
-     #contact-me {
-          margin-bottom: 10px;
-     }
-     #my-cv {
-          margin-top: 0; /* override negative top-margin from previous rule */
-          margin-left: 12px;
-     }
-}
 @media (max-width: 382px) {
      #contact-me {
-          margin-bottom: 10px;
+          margin-bottom: 20px;
      }
 }
 /* accessibility / touch target improvement */
@@ -282,32 +293,5 @@ footer#contact .btn-light {
      .skill-card:hover {
           transform: none;
           box-shadow: none;
-     }
-}
-
-/* Override problematic desktop rules for buttons (>=769px) */
-@media (min-width: 769px) {
-     /* remove large negative offset applied to the whole block on desktop */
-     #home-text {
-          margin-top: 0; /* override -150px so content and buttons align */
-     }
-
-     /* ensure buttons align and have consistent spacing */
-     #home-text .btn {
-          display: inline-block;
-          vertical-align: middle;
-          margin-top: 1rem;
-          padding: 0.5rem 0.9rem;
-          border-radius: 6px;
-     }
-
-     /* keep primary/secondary spacing - avoid conflicting negative margins */
-     #home #contact-me {
-          margin-right: 12px;
-          margin-bottom: 0; /* override any existing bottom margin */
-     }
-     #home #my-cv {
-          margin-top: 0; /* override negative top-margin from previous rule */
-          margin-left: 12px;
      }
 }
